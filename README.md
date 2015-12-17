@@ -14,6 +14,8 @@ You can use this module to anonymize all sensitive strings in a predictable mann
 
 # Synopsis
 
+### node.js
+
 ```
 var DataAnonymizer = require('data-anonymizer');
 var a = new DataAnonymizer({ seed: 'my secret seed' });
@@ -26,6 +28,20 @@ person.firstName = a.anonymize(person.firstName);
 person.lastName  = a.anonymize(person.lastName);
 
 // Now you can store the data elsewhere.
+```
+
+### Raw HTML script
+
+```
+<!-- You only need seedrandom if you want to set the seed of the anonymizer. -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.0/seedrandom.min.js"></script>
+
+<script src="data-anonymizer.js"></script>
+
+<script>
+var a = new DataAnonymizer({ seed: 'my secret seed' });
+console.log(a.anonymize('some text'));
+</script>
 ```
 
 # Behaviour
