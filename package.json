@@ -1,0 +1,35 @@
+{
+  "name": "data-anonymizer",
+  "version": "0.1.0",
+  "description": "Anonymize sensitive data in a controlled, pseudo-random way",
+  "main": "data-anonymizer.js",
+  "scripts": {
+    "test": "mocha **/*.spec.js",
+    "blanket": {
+      "pattern": "lib",
+      "data-cover-never": "node_modules"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joostvunderink/js-data-anonymizer"
+  },
+  "keywords": [
+    "data",
+    "anonymize",
+    "anonymise"
+  ],
+  "author": "Joost Vunderink <joost@vunderink.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joostvunderink/js-data-anonymizer/issues"
+  },
+  "dependencies": {
+    "seedrandom": "^2.4.2"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "mocha": "^2.3.4",
+    "should": "^7.1.1"
+  }
+}
