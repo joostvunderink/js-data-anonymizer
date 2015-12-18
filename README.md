@@ -44,6 +44,19 @@ console.log(a.anonymize('some text'));
 </script>
 ```
 
+# Examples
+
+Here are some examples of input and output, with diacritics enabled:
+
+```
+John Peter Salisbury             -> Csmu Lzwly Qnyiyfoqw
+john.peter.salisbury@example.com -> rclp.uzlzd.yymrjceym@cyaiert.wor
+1279 Basil Road                  -> 2026 Icjjo Good
+San Francisco                    -> Gmd Vcpwayjpq
+Łódż, Polska                     -> Ĭãsṻ, Yleivd
++31 (0) 20 123 234 56            -> +80 (4) 98 803 550 44
+```
+
 # Behaviour
 
 Data anonymizer defines 5 character classes:
@@ -58,7 +71,7 @@ Data anonymizer goes over each character in the input string. For each character
 
 For a given seed, the behaviour on one specific system should always give the same results.
 
-By default, diacritics are enabled. You can disabling them by doing `var anonymizer = new Anonymizer({ diacritics: false })`.
+By default, diacritics are enabled. You can disable them by doing `var anonymizer = new Anonymizer({ diacritics: false })`.
 
 # Seeding
 
