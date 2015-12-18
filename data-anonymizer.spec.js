@@ -4,19 +4,6 @@ require('should');
 
 var Anonymizer = require('./data-anonymizer.js');
 
-var a = new Anonymizer({ diacritics: true });
-var inputs = [
-  'Jouke Visser',
-  'Hoofdweg 103',
-  'Froombosch',
-  'Łódż, Polska'
-];
-inputs.forEach(function(string) {
-  console.log(string + ' -> ' + a.anonymize(string));
-});
-
-// console.log(a.anonymize("Założenie, że nowa RPP będzie podejmowała racjonalne decyzje, to tylko jeden ze scenariuszy"));
-
 describe('character classes for just basic latin alphabet', function() {
   var testdata = [
     // character, class
